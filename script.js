@@ -17,13 +17,15 @@ const renderRecentlySearched = function () {
         for (let i = 0; i < recentlySearched.length; i++) {
             $("#recent-searches").prepend($("<button>").attr("type", "button").attr("class", "btn border btn-block btn-light").text(recentlySearched[i]));
         }
+        cityName = recentlySearched[recentlySearched.length -1];
+        displayCurrentWeather();
     }
 }
 
 const addToLocalStorage = function () {
 
     if (recentlySearched.includes(cityName)) {
-        return;
+        recentlySearched.splice(recentlySearched.indexOf(cityName), 1);
     }
 
     if (recentlySearched.length === 10) {
@@ -105,9 +107,7 @@ const checkDate = function (date, isToday) {
     return `${month}/${day}/${year}`;
 }
 
-const displayCurrentWeather = function () {
-    addToLocalStorage();
-
+const displayCurrentWeather = function () { 
     $(".results").fadeIn(1000);
     $(".name").text(`${cityName} (${checkDate(new Date(), true)})`);
     $("#searchLabel").attr("style", "text-align: left; margin-top: 1%");
@@ -118,12 +118,14 @@ const displayCurrentWeather = function () {
 
 const autoComplete = function (e) {
     cityName = e.suggestion.name;
+    addToLocalStorage();
     displayCurrentWeather();
 }
 
 const clickHandler = function (e) {
     e.preventDefault();
     cityName = $(this).text();
+    addToLocalStorage();
     displayCurrentWeather();
 }
 
