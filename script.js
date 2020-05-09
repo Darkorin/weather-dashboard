@@ -15,7 +15,7 @@ const renderRecentlySearched = function () {
     if (storedSearches) {
         recentlySearched = JSON.parse(storedSearches);
         for (let i = 0; i < recentlySearched.length; i++) {
-            $("#recent-searches").prepend($("<button>").attr("type", "button").attr("class", "btn btn-block btn-light").text(recentlySearched[i]));
+            $("#recent-searches").prepend($("<button>").attr("type", "button").attr("class", "btn border btn-block btn-light").text(recentlySearched[i]));
         }
     }
 }
