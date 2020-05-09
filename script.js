@@ -43,13 +43,13 @@ const currentWeather = function () {
         uvIndex(response.coord.lat, response.coord.lon);
         
         $(`#current-day-icon`).attr("src", `https://openweathermap.org/img/wn/${response.weather[0].icon}@2x.png`);
-        $("#temp").text(`${response.main.temp} ${String.fromCharCode(176)}F`);
+        $("#temp").text(`${response.main.temp} °F`);
         $("#humidity").text(`${response.main.humidity}%`);
         $("#wind-speed").text(`${response.wind.speed} MPH`);
     });
 }
 
-const fivedayForecast = function () {
+const fiveDayForecast = function () {
     $.get(`https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&APPID=${openWeatherApiKey}&units=imperial`).then(function (response) {
         for (let i = 0; i < 5; i++) {
             $(`#day${i}-icon`).attr("src", `https://openweathermap.org/img/wn/${response.list[i*8].weather[0].icon}@2x.png`);
@@ -113,7 +113,7 @@ const displayCurrentWeather = function () {
     $("#searchLabel").attr("style", "text-align: left; margin-top: 1%");
 
     currentWeather();
-    fivedayForecast();
+    fiveDayForecast();
 }
 
 const autoComplete = function (e) {
