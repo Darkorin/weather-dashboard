@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container-fluid header">
+        <header class="bg-dark">
+            <h1>Weather Dashboard</h1>
+        </header>
+    </div>
+
+    <div class="container-fluid content">
+        <div class="row content-row">
+
+
+            <div class="col clickable search-col">
+                <div class="container-fluid search-container">
+                    <h4 id="searchLabel">Search for a City:</h4>
+                    <div class="form-group" id="search-bar">
+                        <input type="search" class="form-control" id="address-input" placeholder="Enter a city name">
+                    </div>
+                </div>
+                <div class="recent-searches">
+                    <div id="recent-searches"></div>
+                </div>
+            </div>
+
+            <div class="col-9 results">
+
+                <div class="row current-container border">
+                    <div class="col current">
+
+                        <div>
+                            <span class="name content-head"></span>
+                            <img id='current-day-icon' src="" alt="icon" style="text-align: left; width: 3em;">
+                        </div>
+                        <div>
+                            Temperature:
+                            <span id="temp"></span>
+                        </div>
+
+                        <div>
+                            Humidity:
+                            <span id="humidity"></span>
+                        </div>
+
+                        <div>
+                            Wind Speed:
+                            <span id="wind-speed"></span>
+                        </div>
+
+                        <div>
+                            UV Index:
+                            <span id="uv-index"></span>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="row fiveday-container">
+
+                    <div class="col fiveday">
+
+                        <div class="content-head">
+                            5-Day Forecast:
+                        </div>
+
+                        <div class="row cards">
+
+                            <div class="card text-white bg-primary col">
+                                <div class="card-body">
+                                    <h5 class="card-title" id="day0-date"></h5>
+                                    <div class="img">
+                                        <img id='day0-icon' src="" alt="icon">
+
+                                    </div>
+                                    <span class="p">Temp: </span> <span id="day0-temp"></span>
+                                    <br>
+                                    <span class="p">Humidity: </span> <span id="day0-humidity"></span>
+
+                                </div>
+                            </div>
+
+                            <div class="card text-white bg-primary col">
+                                <div class="card-body">
+                                    <h5 class="card-title" id="day1-date"></h5>
+                                    <div class="img">
+                                        <img id='day1-icon' src="" alt="icon">
+                                    </div>
+                                    <span class="p">Temp: </span> <span id="day1-temp"></span>
+                                    <br>
+                                    <span class="p">Humidity: </span> <span id="day1-humidity"></span>
+
+                                </div>
+                            </div>
+
+                            <div class="card text-white bg-primary col">
+                                <div class="card-body">
+                                    <h5 class="card-title" id="day2-date"></h5>
+                                    <div class="img">
+                                        <img id='day2-icon' src="" alt="icon">
+                                    </div>
+                                    <span class="p">Temp: </span> <span id="day2-temp"></span>
+                                    <br>
+                                    <span class="p">Humidity: </span> <span id="day2-humidity"></span>
+
+                                </div>
+                            </div>
+
+                            <div class="card text-white bg-primary col">
+                                <div class="card-body">
+                                    <h5 class="card-title" id="day3-date"></h5>
+                                    <div class="img">
+                                        <img id='day3-icon' src="" alt="icon">
+                                    </div>
+                                    <span class="p">Temp: </span> <span id="day3-temp"></span>
+                                    <br>
+                                    <span class="p">Humidity: </span> <span id="day3-humidity"></span>
+
+                                </div>
+                            </div>
+
+                            <div class="card text-white bg-primary col" id="last">
+                                <div class="card-body">
+                                    <h5 class="card-title" id="day4-date"></h5>
+                                    <div class="img">
+                                        <img id='day4-icon' src="" alt="icon">
+                                    </div>
+                                    <span class="p">Temp: </span> <span id="day4-temp"></span>
+                                    <br>
+                                    <span class="p">Humidity: </span> <span id="day4-humidity"></span>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/places.js@1.17.1"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+
+.img,
+.header {
+	text-align: center;
+}
+
+.header {
+	padding: 0;
+}
+
+header {
+    color: white;
+	padding: 15px;
+}
+
+#searchLabel {
+    margin-top: 1%;
+    text-align: center;
+}
+
+#search-bar {
+	height: 60px;
+	margin: 15px auto;
+	max-width: 500px;
+}
+
+.search-container {
+	padding: 0;
+}
+
+.content-head {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.current-container,
+.fiveday-container {
+	margin: 15px 15px 15px 0px;
+}
+
+.current-container {
+    border: 1px solid;
+}
+
+.search-col{
+    text-align: center;
+}
+
+.current,
+.fiveday {
+	padding: 15px;
+}
+
+.card {
+	height: 100%;
+	margin-left: 6px;
+	padding: 0;
+}
+
+.card-body {
+    padding: 5px 0px 0px 0px;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.card-title {
+    text-align: left;
+    font-size: 16px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+
+#last {
+	margin-right: 6px;
+}
+
+p {
+	margin-bottom: 2px;
+	width: 70px;
+}
+
+.results {
+	display: none;
+}
+
+.recent-searches {
+	max-width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+img {
+	height: 60%;
+	width: 60%;
+}
